@@ -1,6 +1,6 @@
 import Foundation
 
-struct ApexPredator{
+struct ApexPredator: Decodable{
     let id: Int
     let name: String
     let type: String
@@ -10,7 +10,7 @@ struct ApexPredator{
     let movieScenes: [MoviesScenes]
     let link: String
     
-    struct MoviesScenes{
+    struct MoviesScenes: Decodable{
         let id: Int
         let movie: String
         let sceneDescriptions: String
