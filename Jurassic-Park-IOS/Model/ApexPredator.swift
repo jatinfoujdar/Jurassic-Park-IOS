@@ -3,7 +3,7 @@ import SwiftUI
 struct ApexPredator: Decodable, Identifiable{
     let id: Int
     let name: String
-    let type: String
+    let type: APType
     let latitude: Double
     let longitude: Double
     let movies: [String]
@@ -15,24 +15,23 @@ struct ApexPredator: Decodable, Identifiable{
         name.lowercased().replacingOccurrences(of: "", with: "")
     }
     
-    enum APType{
+    enum APType: String, Decodable {
         case land
         case air
         case sea
         
-        
-        var backgronund : Color{
+        var background: Color {  
             switch self {
             case .land:
-                    .brown
+                return .brown
             case .sea:
-                    .blue
+                return .blue
             case .air:
-                    .teal
-                
+                return .teal
             }
         }
     }
+
     
    
     
