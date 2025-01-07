@@ -1,4 +1,4 @@
-import Foundation
+
 
 struct ApexPredator: Decodable{
     let id: Int
