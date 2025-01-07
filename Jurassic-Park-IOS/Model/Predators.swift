@@ -1,6 +1,6 @@
 import Foundation
 
-class ApxDecoder{
+class Predators{
     var apexPredators : [ApexPredator] = []
     
     init() {
