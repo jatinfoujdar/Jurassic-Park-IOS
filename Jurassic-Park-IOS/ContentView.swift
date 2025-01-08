@@ -48,15 +48,12 @@ struct ContentView: View {
             .toolbar{
                 ToolbarItem(placement: .topBarLeading){
                     Button{
-                        alphabetical.toggle()
-                    }label: {
-                        if alphabetical{
-                            Image(systemName: "film")
-                               
-                        }else{
-                            Image(systemName: "textformat")
+                        withAnimation{
+                            alphabetical.toggle()
                         }
-                       
+                    }label: {
+                        Image(systemName: alphabetical ? "film" : "textformat")
+                            .symbolEffect(.bounce, value: alphabetical)
                     }
                 }
             }
