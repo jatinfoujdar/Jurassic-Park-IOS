@@ -29,4 +29,15 @@ class Predators{
             }
         }
     }
+    
+    func sort(by alphabetical : Bool){
+        apexPredators.sort{ Predicate1, Predator2 in
+            if alphabetical{
+                Predicate1.name < Predator2.name
+            }
+            else{
+                Predicate1.id < Predator2.id
+            }
+        }
+    }
 }
