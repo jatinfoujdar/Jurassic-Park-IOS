@@ -62,7 +62,7 @@ struct ContentView: View {
                 }
                 ToolbarItem(placement: .topBarTrailing){
                     Menu {
-                        Picker("Filter", selection: $currentSection){
+                        Picker("Filter", selection: $currentSection.animation()){
                             ForEach(APType.allCases){ type in
                                 Label(type.rawValue.capitalized, systemImage: type.icon)
                             }
