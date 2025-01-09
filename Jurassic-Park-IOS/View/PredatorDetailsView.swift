@@ -9,6 +9,10 @@ struct PredatorDetailsView: View {
                     Image(predator.type.rawValue)
                         .resizable()
                         .scaledToFill()
+                        .overlay{
+                        LinearGradient(stops: [Gradient.Stop (color: .clear, location: 0.8),
+                        Gradient.Stop (color: .black, location: 1) ], startPoint: .top, endPoint: .bottom)
+                        }
                     
                     Image(predator.image)
                         .resizable()
@@ -61,6 +65,6 @@ struct PredatorDetailsView: View {
 }
 
 #Preview {
-    PredatorDetailsView(predator: Predators().apexPredators[1])
-        //.preferredColorScheme(.dark)
+    PredatorDetailsView(predator: Predators().apexPredators[10])
+        .preferredColorScheme(.dark)
 }
