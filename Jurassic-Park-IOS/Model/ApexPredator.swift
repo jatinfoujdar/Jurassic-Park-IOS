@@ -16,10 +16,10 @@ struct ApexPredator: Decodable, Identifiable{
     }
     
     
-    struct MoviesScenes: Decodable {
+    struct MoviesScenes: Decodable,Identifiable {
         let id: Int
         let movie: String
-        let sceneDescriptions: String?
+        let sceneDescription: String?
     }
 }
 
