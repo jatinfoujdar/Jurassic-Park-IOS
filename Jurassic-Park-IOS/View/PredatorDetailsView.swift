@@ -82,13 +82,16 @@ struct PredatorDetailsView: View {
                    
             }
                 .ignoresSafeArea(.all)
-                .toolbarRole(.automatic)
+                .toolbarBackground(.automatic)
         }
     }
 }
 
 #Preview {
     let predator = Predators().apexPredators[10]
-    PredatorDetailsView(predator: predator, position: .camera(MapCamera(centerCoordinate: predator.location, distance: 30000)))
-        .preferredColorScheme(.dark)
+ 
+    NavigationStack{
+        PredatorDetailsView(predator: predator, position: .camera(MapCamera(centerCoordinate: predator.location, distance: 30000)))
+            .preferredColorScheme(.dark)
+    }
 }
