@@ -4,6 +4,8 @@ import MapKit
 struct PredatorMap: View {
     let predators = Predators()
     @State var position : MapCameraPosition
+  
+    
     var body: some View {
         Map(position: $position){
             ForEach(predators.apexPredators){predator in
@@ -17,10 +19,11 @@ struct PredatorMap: View {
                 }
             }
         }
+        .toolbarBackground(.automatic)
     }
 }
 
 #Preview {
-    PredatorMap(position: .camera(MapCamera(centerCoordinate: Predators().apexPredators[2].location, distance: 1000, heading: 250, pitch: 80)))
+    PredatorMap(position: .camera(MapCamera(centerCoordinate: Predators().apexPredators[0].location, distance: 1000, heading: 250, pitch: 80)))
         .preferredColorScheme(.dark)
 }
