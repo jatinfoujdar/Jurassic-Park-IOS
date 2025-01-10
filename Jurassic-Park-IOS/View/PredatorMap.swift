@@ -24,6 +24,6 @@ struct PredatorMap: View {
 }
 
 #Preview {
-    PredatorMap(position: .camera(MapCamera(centerCoordinate: Predators().apexPredators[0].location, distance: 1000, heading: 250, pitch: 80)))
+    PredatorMap(position: .camera(MapCamera(centerCoordinate: Predators().apexPredators[3].location, distance: 1000, heading: 250, pitch: 80)))
         .preferredColorScheme(.dark)
 }
