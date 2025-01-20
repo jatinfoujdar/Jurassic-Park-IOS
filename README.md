@@ -1,4 +1,4 @@
-# Jurassic-Park-IOS
+# Jurassic-Park-IOS-APP
 ## Project Images
 
 Here are some screenshots:
